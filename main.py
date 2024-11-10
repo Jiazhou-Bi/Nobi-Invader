@@ -14,14 +14,14 @@ RED_SPACE_SHIP = pygame.image.load(os.path.join("assets", "pixel_ship_red_small.
 GREEN_SPACE_SHIP = pygame.image.load(os.path.join("assets", "pixel_ship_green_small.png"))
 BLUE_SPACE_SHIP = pygame.image.load(os.path.join("assets", "pixel_ship_blue_small.png"))
 
-# Player's ship
-YELLOW_SPACE_SHIP = pygame.image.load(os.path.join("assets", "pixel_ship_yellow.png"))
+# Player
+NOBI = pygame.image.load(os.path.join("assets", "Nobi.png"))
 
 # Lasers
 RED_LASER = pygame.image.load(os.path.join("assets", "pixel_laser_red.png"))
 GREEN_LASER = pygame.image.load(os.path.join("assets", "pixel_laser_green.png"))
 BLUE_LASER = pygame.image.load(os.path.join("assets", "pixel_laser_blue.png"))
-YELLOW_LASER = pygame.image.load(os.path.join("assets", "pixel_laser_yellow.png"))
+BREAD = pygame.transform.scale(pygame.image.load(os.path.join("assets", "Bread.png")), (40,40))
 
 # Background
 BG = pygame.transform.scale(pygame.image.load(os.path.join("assets", "background-black.png")), (WIDTH, HEIGHT))
@@ -97,8 +97,8 @@ class Ship:
 class Player(Ship):
     def __init__(self, x, y, health=100):
         super().__init__(x, y, health)
-        self.ship_img = YELLOW_SPACE_SHIP
-        self.laser_img = YELLOW_LASER
+        self.ship_img = NOBI
+        self.laser_img = BREAD
         self.mask = pygame.mask.from_surface(self.ship_img)
         self.max_health = health
 
